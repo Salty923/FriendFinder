@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div class="container">
+            
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1 class="text-center">Survey Questions</h1>
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h4 class="text-center">First Name (required)</h4>
+                    <input type="text" id="first_name" class="form-control" required>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h4 class="text-center">Last Name (required)</h4>
+                    <input type="text" id="last_name" class="form-control" required>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h4 class="text-center">Add Link to your photo! (required)</h4>
+                    <input type="text" id="photo" class="form-control" required>
+                </div>
+            </div>
+            
+            <div class="row"> 
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Question 1</h2>
+                    <h4>What is your favorite music?</h4>
+                    <select id="music">
+                        <option value="country">Country</option>
+                        <option value="rock">Rock</option>
+                        <option value="rap">Rap</option>
+                        <option value="pop">Pop</option>
+                        <option value="classical">Classical</option>
+                    </select>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Question 2</h2>
+                    <h4>What is your favorite animal?</h4>
+                    <select id="pet">
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                        <option value="fish">Fish</option>
+                        <option value="none">None</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Question 3</h2>
+                    <h4>Which word best describes your diet?</h4>
+                    <select id="diet">
+                        <option value="meat"> Steak</option>
+                        <option value="carbs">Potatoes</option>
+                        <option value="carrots">Carrots</option>
+                        <option value="beer">Beer</option>
+                    </select>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Question 4</h2>
+                    <h4>Which word best describes your polotics?</h4>
+                    <select id="guns">
+                        <option value="guns">Arm the teachers</option>
+                        <option value="some-guns">Regulation</option>
+                        <option value="no_guns">Take them away</option>
+                        <option value="none">I DONT CARE</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Question 5</h2>
+                    <h4>Where would you rather live?</h4>
+                    <select id="location">
+                        <option value="farm"> Farm</option>
+                        <option value="city">City</option>
+                        <option value="suburbs">Suburbs</option>
+                        <option value="alaska">Alaska</option>
+                    </select>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Question 6</h2>
+                    <h4>How do you manage your money?</h4>
+                    <select id="money">
+                        <option value="spend">I'll buy</option>
+                        <option value="split">Lets split the bill</option>
+                        <option value="broke">I forgot my wallet</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Question 7</h2>
+                    <h4>Who would you rather meet?</h4>
+                    <select id="john">
+                        <option value="kennedy"> John F Kennedy</option>
+                        <option value="cena">John Cena</option>
+                        <option value="denver">John Denver</option>
+                        <option value="gacy">John Wanye Gacy</option>
+                    </select>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Question 8</h2>
+                    <h4>What would you rather watch?</h4>
+                    <select id="movie">
+                        <option value="action">Die Hard</option>
+                        <option value="drama">Titanic</option>
+                        <option value="comedy">Animal House</option>
+                        <option value="sci-fi">Star Wars</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Question 9</h2>
+                    <h4>How do feel about food that falls on the floor?</h4>
+                    <select id="food">
+                        <option value="gross"> No way</option>
+                        <option value="3">3 second rule</option>
+                        <option value="5">5 second rule</option>
+                        <option value="eat">I wouldn't want to waste it</option>
+                    </select>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <h2>Question 10</h2>
+                    <h4>Do you like to dance?</h4>
+                    <select id="dance">
+                        <option value="dance">Anytime, anywhere</option>
+                        <option value="somewhat">If I am at a wedding</option>
+                        <option value="shy">In the shower</option>
+                        <option value="no_dance">I have two left feet</option>
+                    </select>
+                </div>
+            </div>
+            
+            
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                
+                <button type="button" class="btn btn-lg btn-success">Submit</button>
+                
+            </div>
+            
+
+
+        </div>
+        
+       
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
