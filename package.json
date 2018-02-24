@@ -1,0 +1,23 @@
+{
+  "name": "FriendFinder",
+  "version": "1.0.0",
+  "description": "App that matches people based on common interest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salty923/FriendFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Salty923/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/Salty923/FriendFinder#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
