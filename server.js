@@ -8,8 +8,13 @@ var path = require("path");
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-require('./routing/htmlRoutes')(app);
-require('./routing/apiRoutes')(app);
+// var router = require('./routing/htmlRoutes');
+// var api = require('./routing/apiRoutes');
+
+
+require('./app/routing/htmlRoutes')(app);
+require('./app/routing/apiRoutes')(app);
+
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
