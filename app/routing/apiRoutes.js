@@ -1,6 +1,6 @@
 var friendData = require('../data/friends');
 
-var apiRoutes = function(app){
+module.exports = function(app){
     app.get('/api/friends', (req, res) => {
         res.json(friendData);
     });
@@ -12,4 +12,3 @@ var apiRoutes = function(app){
 
 
 
-module.exports = apiRoutes;
