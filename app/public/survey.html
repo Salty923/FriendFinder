@@ -195,7 +195,10 @@
                         $('#photo').val('');
 
 
-                        console.log(friend);
+                        $.post('/api/friends',friend,function(data){
+                            console.log(friend);
+                            //allFriends.push(data);
+                        })
 
 
                     })
