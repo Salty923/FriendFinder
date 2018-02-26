@@ -195,9 +195,13 @@
                         $('#photo').val('');
 
 
-                        $.post('/api/friends',friend,function(data){
-                            console.log(friend);
-                            //allFriends.push(data);
+                        $.post('/api/friends',friend,
+                        function(data){
+                        if (data) {
+                            console.log('you have been added');
+                        }else{
+                            console.log('There is a problem');
+                        }
                         })
 
 
