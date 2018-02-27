@@ -1,2 +1,6 @@
 # FriendFinder
-App that matches people based on common interest
+
+
+### Find a friend with common interest!
+
+You can take our quick survey and we will match you with someone who has shared interest.

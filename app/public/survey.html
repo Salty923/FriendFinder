@@ -159,7 +159,21 @@
                 <button id="submit" type="button" class="btn btn-lg btn-success">Submit</button>
                 
             </div>
-
+            
+            <!-- The Modal -->
+            <div id="myModal" class="modal"> 
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Your Friend Show HERE!!</p>
+                </div>       
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+              <div class="panel-footer">
+                    Panel footer
+                </div>
         </div>
         
        
@@ -170,7 +184,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function () {
-                    $('#submit').on('click',function(){
+                    $(btn).on('click',function(){
                         event.preventDefault();
                         var friend = {
                             first: $('#first_name').val().trim(),
@@ -199,12 +213,11 @@
                         function(data){
                         if (data) {
                             console.log('you have been added');
+
                         }else{
                             console.log('There is a problem');
                         }
                         })
-
-
                     })
                 });
         </script>
