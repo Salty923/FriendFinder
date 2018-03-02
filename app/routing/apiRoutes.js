@@ -1,4 +1,6 @@
 
+
+var usertable =[];
 var friendData = require('../data/friends');
 
 module.exports = function(app){
@@ -7,7 +9,10 @@ module.exports = function(app){
     });
 
     app.post('/api/friends', (req, res) => {
-        res.json(friendData);
+        //pushing request body into usertable array in this file.
+        usertable.push(req.body);
+
+        res.json(usertable);
     });
 
 

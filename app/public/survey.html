@@ -184,7 +184,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script>
             $(document).ready(function () {
-                    $(btn).on('click',function(){
+                    $("#submit").on('click',function(){
                         event.preventDefault();
                         var friend = {
                             first: $('#first_name').val().trim(),
@@ -202,20 +202,20 @@
                                 $('#food').val(),
                                 $('#dance').val()
                             ]
-                        }
+                            
+                        };
 
-                        $('#first_name').val('');
-                        $('#last_name').val('');
-                        $('#photo').val('');
+                        
 
 
                         $.post('/api/friends',friend,
-                        function(data){
-                        if (data) {
-                            console.log('you have been added');
-                        }else{
-                            console.log('There is a problem');
-                        }
+                            //data is what is coming back from the server
+                            function(data){
+                            $('#first_name').val('');
+                            $('#last_name').val('');
+                            $('#photo').val('');
+
+                            console.log(data.name);
                         })
                     })
                 });
