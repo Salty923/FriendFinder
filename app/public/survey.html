@@ -201,21 +201,32 @@
                                 $('#movie').val(),
                                 $('#food').val(),
                                 $('#dance').val()
-                            ]
-                            
+                            ]                          
                         };
-
                         
 
+                        //this works.
+                        // console.log(friend);
 
+                            // $.ajax({
+                            //         url:"/api/friends",
+                            //         method: "POST",
+                            //         data: friend
+                            //     }).done( (response) => {
+                            //     // console.log(JSON.stringify(response)); 
+                            // var newRes = JSON.parse(response)
+                            // console.log(newRes);
+                           
+                        //YES, THANK YOU! no prob, Go back to you ajax call and 
+                        //besure to do the json parsr, I am curous to see if you fancy call wor
+                                           
                         $.post('/api/friends',friend,
                             //data is what is coming back from the server
                             function(data){
                             $('#first_name').val('');
                             $('#last_name').val('');
                             $('#photo').val('');
-
-                            console.log(data.name);
+                            console.log(JSON.parse(data));  
                         })
                     })
                 });
