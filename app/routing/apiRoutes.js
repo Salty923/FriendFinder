@@ -1,7 +1,6 @@
 
 
 
-
 var friendData = require('../data/friends');
 var userTable =[];
 
