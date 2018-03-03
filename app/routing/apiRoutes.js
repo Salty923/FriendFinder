@@ -1,26 +1,35 @@
 
 
+var thisUser;
+var match;
+var allFriends = require('../data/friends');
 
-var friendData = require('../data/friends');
-var userTable =[];
 
 module.exports = function(app){
     //Shows user data at this url
     app.get('/api/friends', (req, res) => {
-        res.json(friendData);
+        res.json(allFriends);
     });
 
 
     app.post('/api/friends', (req, res) => {
-        console.log("this api was hit");
+        console.log("the post api/friends was hit");
         //pushing request body into usertable array in this file.
-        userTable.push(req.body);
-        res.send(JSON.stringify(userTable));  
- 
-
+        thisUser = req.body;
+        console.log(thisUser); 
+        allFriends.push(thisUser);
+        res.send(JSON.stringify(allFriends));
+        
     });
 
+
+
     //add logic here..
+    //for loop   this.User answers check
+    // for (let i = 0; i < allFriends.length; i++) {
+    //     thisUser.answer[i]
+        
+    // }
     
 
 }

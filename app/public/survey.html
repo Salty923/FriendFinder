@@ -204,6 +204,7 @@
                             ]                          
                         };
 
+
                             // $.ajax({
                             //         url:"/api/friends",
                             //         method: "POST",
@@ -217,10 +218,14 @@
                         $.post('/api/friends',friend,
                             //data is what is coming back from the server
                             function(data){
+                            
+                            console.log(JSON.parse(data));  
+
+                            //clear form
                             $('#first_name').val('');
                             $('#last_name').val('');
                             $('#photo').val('');
-                            console.log(JSON.parse(data));  
+
                         })
                     })
                 });
