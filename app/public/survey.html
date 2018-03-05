@@ -167,10 +167,13 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Did we just become best friends?</h4>
+                        <h4 class="modal-title">Your Match!!</h4>
                     </div>
                     <div class="modal-body">
-                        <p>Show the friend</p>
+        
+                        <h5 id="userMatch"></h5>
+                        <img id="photoMatch" src="">
+
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -211,13 +214,17 @@
                         $.post('/api/friends',friend,
                             //data is what is coming back from the server
                             function(data){
-                            
-                            console.log(JSON.parse(data));  
+                                var data = JSON.parse(data);
+                                console.log(data);
 
-                            //clear form
-                            $('#first_name').val('');
-                            $('#last_name').val('');
-                            $('#photo').val('');
+                                $('#userMatch').html(`${data.first} ${data.last}`);
+                                $('#photoMatch').attr('src',data.photo);
+                                 
+
+                                //clear form
+                                $('#first_name').val('');
+                                $('#last_name').val('');
+                                $('#photo').val('');
 
                         })
                     })

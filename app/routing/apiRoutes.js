@@ -14,12 +14,12 @@ module.exports = function(app){
 
 
     app.post('/api/friends', (req, res) => {
-        console.log("the post api/friends was hit");
+        //console.log("the post api/friends was hit");
         //pushing request body into usertable array in this file.
         thisUser = req.body;
         allFriends.push(thisUser);
-        res.send(JSON.stringify(allFriends));
         findFriend();
+        res.send(JSON.stringify(match));
     });
         
     }
@@ -38,21 +38,27 @@ function findFriend() {
             delta= Math.abs(thisUser.answers[j] - compareUser.answers[j]);
             tally += delta;         
         }
-
     allScores.push(tally);
-    console.log(tally);
+    //console.log(tally);
     tally = 0;
     }
+    lowest();
 };    
 
 
-// function lowest() {
-//     index = 0;
-//     var value = allScores[0];
-//     for (var l = 1; l < allScores.length; l++) {
-//         if (allScores[l] < value) {
-//             value = allScores[l];
-//             index = l;
-//         }
-//     }
-// }
+//Find lowest score to match friends
+function lowest() {
+    index = 0;
+    var value = allScores[0];
+    //Use -1 to not select user submitting
+    for (var l = 0; l < allScores.length -1; l++) {
+        if (allScores[l] < value) {
+            value = allScores[l];
+            index = l;
+        }
+    }
+    match = allFriends[index];
+    //console.log(`Use ${index} index for the match`);
+    //console.log(match);
+    
+}
