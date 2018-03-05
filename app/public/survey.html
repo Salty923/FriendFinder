@@ -154,26 +154,30 @@
             </div>
             
             
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                
-                <button id="submit" type="button" class="btn btn-lg btn-success">Submit</button>
-                
-            </div>
             
-            <!-- The Modal -->
-            <div id="myModal" class="modal"> 
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <p>Your Friend Show HERE!!</p>
-                </div>       
-            </div>
-        </div>
+            
+        <!-- Trigger the modal with a button -->
+        <button id="submit" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Find Friend</button>
         
-        <div class="panel panel-default">
-              <div class="panel-footer">
-                    Panel footer
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+        
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Did we just become best friends?</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>Show the friend</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
+        
+            </div>
         </div>
         
        
@@ -202,18 +206,7 @@
                                 $('#food').val(),
                                 $('#dance').val()
                             ]                          
-                        };
-
-
-                            // $.ajax({
-                            //         url:"/api/friends",
-                            //         method: "POST",
-                            //         data: friend
-                            //     }).done( (response) => {
-                            //     // console.log(JSON.stringify(response)); 
-                            // var newRes = JSON.parse(response)
-                            // console.log(newRes);
-                           
+                        }; 
                                            
                         $.post('/api/friends',friend,
                             //data is what is coming back from the server

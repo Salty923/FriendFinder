@@ -2,7 +2,7 @@ var allFriends =[
     {
         first: "Scott",
         last: "Saltzman",
-        photo: "http://www.qygjxz.com/the-rock-images.html",
+        photo: 'https://pbs.twimg.com/profile_images/753070408090333184/h3bTQljI_400x400.jpg',
         answers: [
             2,
             2,
@@ -15,7 +15,26 @@ var allFriends =[
             2,
             4
         ]
+    },
+    {
+        first: "The",
+        last: "Rock",
+        photo: 'http://www.pngmart.com/image/29925',
+        answers: [
+            5,
+            1,
+            1,
+            2,
+            4,
+            1,
+            4,
+            2,
+            4,
+            1
+        ]
     }
+
+
 ];
 
 

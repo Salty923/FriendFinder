@@ -29,25 +29,20 @@ function findFriend() {
     //var allScores =[];
     let score =[];
     let tally = 0;
+    let delta;
     //Loop through all user but not the last one which is current user
     for (let i = 0; i < allFriends.length-1; i++) {
         var compareUser = allFriends[i];
         //loop through all of the question and push delta to score
         for (let j = 0; j < 10; j++) {
-            let deltas= Math.abs(thisUser.answers[j] - compareUser.answers[j]);
-            score.push(deltas);         
+            delta= Math.abs(thisUser.answers[j] - compareUser.answers[j]);
+            tally += delta;         
         }
-            //console.log(score);   
-        //add up sum of all 10 deltas in the scores array.
-        for (let k = 0; k < 11; k++) {
-            tally += score[i];
-            //console.log(score[i]);
-        }
+
     allScores.push(tally);
+    console.log(tally);
     tally = 0;
-    score = [];
     }
-    console.log(allScores);
 };    
 
 
